@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4A Klassenwebsite</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #050510;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 35px;
+    background: #080820;
+    border-bottom: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #00ffff;
+    text-shadow: 0 0 15px #00ffff;
+}
+
+header p {
+    color: #ff00ff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: #080810;
+}
+
+nav button,
+.week-buttons button {
+    background: #101020;
+    color: white;
+    border: 1px solid #00ffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav button:hover,
+.week-buttons button:hover {
+    background: #00ffff;
+    color: black;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+section {
+    display: none;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+section.active {
+    display: block;
+}
+
+h2 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.card {
+    background: #101020;
+    border: 1px solid #00ffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 0 10px #00ffff33;
+}
+
+.students {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.student {
+    background: #101020;
+    border: 1px solid #ff00ff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.student h3 {
+    color: #ff00ff;
+}
+
+.week-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.week {
+    display: none;
+}
+
+.active-week {
+    display: block;
+}
+
+.timetable-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.photo-box {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101020;
+    border: 2px dashed #ff00ff;
+    border-radius: 15px;
+    color: #ff00ff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-top: 1px solid #00ffff;
+    color: #888;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>4A</h1>
+    <p>Unsere Klassenwebsite</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">🏠 Startseite</button>
+    <button onclick="showPage('students')">👥 Schüler</button>
+    <button onclick="showPage('timetable')">🕒 Stundentafel</button>
+    <button onclick="showPage('photo')">📸 Klassenfoto</button>
+    <button onclick="showPage('info')">ℹ️ Info</button>
+</nav>
+
+
+<!-- STARTSEITE -->
+
+<section id="home" class="active">
+
+    <h2>Willkommen bei der 4A 👋</h2>
+
+    <div class="card">
+        <h3>Unsere Klasse</h3>
+        <p>
+            Willkommen auf der Website der 4A!
+            Hier findet ihr unseren Stundenplan,
+            Informationen über die Klasse und mehr.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- SCHÜLER -->
+
+<section id="students">
+
+    <h2>👥 Unsere Schüler</h2>
+
+    <div class="students">
+
+        <div class="student">
+            <h3>Schüler 1</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 2</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 3</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 4</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 5</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 6</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 7</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 8</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 9</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 10</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 11</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 12</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 13</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 14</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 15</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 16</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 17</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 18</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 19</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+        <div class="student">
+            <h3>Schüler 20</h3>
+            <p>Beschreibung kommt hier hin.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STUNDENPLAN -->
+
+<section id="timetable">
+
+    <h2>🕒 Stundentafel</h2>
+
+    <div class="week-buttons">
+
+        <button onclick="showWeek('weekA')">
+            ⚡ Woche A
+        </button>
+
+        <button onclick="showWeek('weekB')">
+            💜 Woche B
+        </button>
+
+    </div>
+
+
+    <!-- WOCHE A -->
+
+    <div id="weekA" class="week active-week">
+
+        <h3>⚡ Woche A</h3>
+
+        <!-- HIER BILD EINFÜGEN -->
+        <img
+            src="HIER_BILD_URL_WOCHE_A_EINFÜGEN"
+            alt="Stundenplan Woche A"
+            class="timetable-image"
+        >
+
+    </div>
+
+
+    <!-- WOCHE B -->
+
+    <div id="weekB" class="week">
+
+        <h3>💜 Woche B</h3>
+
+        <!-- HIER BILD EINFÜGEN -->
+        <img
+            src="HIER_BILD_URL_WOCHE_B_EINFÜGEN"
+            alt="Stundenplan Woche B"
+            class="timetable-image"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- KLASSENFOTO -->
+
+<section id="photo">
+
+    <h2>📸 Klassenfoto</h2>
+
+    <div class="photo-box">
+        Klassenfoto kommt hier hin
+    </div>
+
+</section>
+
+
+<!-- INFO -->
+
+<section id="info">
+
+    <h2>ℹ️ Informationen</h2>
+
+    <div class="card">
+        <h3>Über die 4A</h3>
+        <p>
+            Hier können später Informationen über unsere Klasse,
+            Schule, Projekte und Veranstaltungen stehen.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📅 Termine</h3>
+        <p>
+            Hier können wichtige Termine eingetragen werden.
+        </p>
+    </div>
+
+</section>
+
+
+<footer>
+    4A Klassenwebsite • © 2026
+</footer>
+
+
+<script>
+
+function showPage(page) {
+
+    let sections = document.querySelectorAll("section");
+
+    sections.forEach(function(section) {
+        section.classList.remove("active");
+    });
+
+    document.getElementById(page).classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function showWeek(week) {
+
+    document.getElementById("weekA")
+        .classList.remove("active-week");
+
+    document.getElementById("weekB")
+        .classList.remove("active-week");
+
+    document.getElementById(week)
+        .classList.add("active-week");
+
+}
+
+</script>
+
+</body>
+</html>
